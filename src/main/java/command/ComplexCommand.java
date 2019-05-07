@@ -2,7 +2,7 @@ package command;
 
 import java.util.ArrayList;
 
-public class ComplexCommand {
+private class ComplexCommand implements DriverCommand{
     ArrayList<DriverCommand> commandQueue;
 
     public ComplexCommand(ArrayList<DriverCommand> commandQueue) {
@@ -16,7 +16,7 @@ public class ComplexCommand {
     public void execute()
     {
         for (DriverCommand command : commandQueue){
-            if (command instanceof DriverCommand){
+            if (command DriverCommand){
                 command.execute();
             }
         }
